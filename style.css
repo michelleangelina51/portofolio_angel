@@ -1,0 +1,288 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b3e5fc;
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav img {
+    width: 80px; /* Perbesar ukuran logo */
+    transition: transform 0.3s ease;
+}
+
+nav img:hover {
+    transform: rotate(360deg);
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    padding: 0 10px; /* Tambahkan padding horizontal untuk jarak */
+}
+
+nav ul li a i {
+    margin-right: 8px; /* Jarak antara ikon dan teks */
+}
+
+nav ul li a:hover {
+    color: #0288d1;
+    transform: scale(1.1);
+}
+
+/* Animasi untuk Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+    background-color: #e1f5fe;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    color: #0288d1;
+}
+
+.hero-text p {
+    font-size: 20px;
+    color: #444;
+}
+
+.hero img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #b3e5fc;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Tentang Saya Section */
+.tentang {
+    padding: 50px;
+    background-color: #e1f5fe;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+.tentang-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.tentang-text {
+    max-width: 50%;
+    order: 2; /* Urutkan teks di sebelah kanan */
+}
+
+.tentang-text h2 {
+    font-size: 36px;
+    color: #0288d1;
+}
+
+.tentang-text p {
+    font-size: 20px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.tentang-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tentang-text ul li {
+    font-size: 18px;
+    color: #444;
+    margin: 10px 0;
+}
+
+.tentang-img {
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 1; 
+}
+
+.tentang-img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #b3e5fc;
+    animation: bounce 2s infinite;
+}
+
+/* Portofolio Section */
+.portfolio {
+    padding: 50px;
+    background-color: #f3e5f5; /* Warna pastel lembut */
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.portfolio h2 {
+    color: #ab47bc;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.portfolio-item {
+    display: inline-block;
+    width: 25%;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px;
+    border: 2px solid #f8bbd0; /* Border pastel */
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item h3 {
+    color: #ab47bc;
+    font-size: 24px;
+    margin-top: 15px;
+}
+
+.portfolio-item p {
+    color: #444;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Kontak Section */
+.kontak {
+    padding: 50px;
+    background-color: #e1f5fe;
+    text-align: center;
+}
+
+.kontak h2 {
+    color: #0288d1;
+}
+
+.kontak form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kontak input, .kontak textarea {
+    width: 80%;
+    max-width: 500px;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #0288d1;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.kontak input:focus, .kontak textarea:focus {
+    border-color: #01579b;
+    outline: none;
+}
+
+.kontak button {
+    padding: 15px 30px;
+    background-color: #0288d1;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.kontak button:hover {
+    background-color: #01579b;
+}
+
+/* Footer */
+footer {
+    background-color: #b3e5fc;
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+footer a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+
+footer a i {
+    margin-right: 10px;
+}
+
+footer a:hover {
+    color: #0288d1;
+}
